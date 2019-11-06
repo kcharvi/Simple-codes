@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+class Main
+
+{
+    
+    public static void main(String[] args)
+    
+     {
+       
+        Scanner ob=new Scanner(System.in);
+
+        System.out.println("Enter the number of string you want to enter");
+
+        int n=ob.nextInt();
+
+        if(n==0)
+
+        {
+
+            System.exit(1);
+
+        }
+
+        boolean swap;
+
+        String[] A=new String[n];
+
+        System.out.println("Enter the Strings one by one:");
+
+        for(int i=0; i <= A.length; i++)
+
+        {
+
+            A[i] = ob.nextLine();
+
+        }
+
+        String temp="";
+
+        do
+
+        {
+
+        swap=false;
+
+        for(int i=0;i<n-1;i++)
+
+        {
+
+            if(A[i].charAt(0)>A[i+1].charAt(0))
+
+            {
+
+                swap=true;
+
+                temp=A[i];
+
+                A[i]=A[i+1];
+
+                A[i+1]=A[i];
+
+            }
+
+        }
+
+        }while(swap);
+
+        for(int j=0;j<=n;j++)
+
+        {
+
+           System.out.println(A[j]);
+
+        }
+ 
+    }
+
+}
